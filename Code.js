@@ -23,7 +23,6 @@
       .addItem('⚙️ パートナー設定（名前を変更）', 'showSettingsDialog')
       .addSeparator()
       .addItem('📱 コックピットを開く（サイドバー）', 'showSidebar')
-      .addItem('✈️  外部パイプURLを表示（マイク用）', 'showWebAppUrl')
       .addItem('📋 Weekly Review用のログをコピー', 'prepareReviewLogs')
       .addSeparator()
       .addSubMenu(ui.createMenu('⚗️  叡智の蒸留 (Synthesis)')
@@ -126,17 +125,7 @@
   SpreadsheetApp.getUi().showSidebar(html);
   }                                                             
                                           
-  function showWebAppUrl() {                                    
-    const url = ScriptApp.getService().getUrl();                
-    const html = `<p>以下のURLをコピーしてください：</p>
-                  <textarea style="width:100%; height:80px;"    
-  readonly>${url}</textarea>`;                              
-    SpreadsheetApp.getUi().showModalDialog(                     
-      HtmlService.createHtmlOutput(html).setWidth(400).setHeight
-  (220),                                                        
-      '✈️  外部パイプ (External URL)'                        
-    );                                                          
-  }                                                         
+                                                    
                                                                 
   // ---------------------------------------------------------- 
   // 📡 2. 外部パイプからの受信口

@@ -417,10 +417,10 @@
     <div id="settings-modal">
       <h3><span class="material-icons" style="font-size:18px;">settings</span> パートナー設定</h3>
       <label class="settings-label">あなたの名前（AIに呼んでもらいたい名前）</label>
-      <input type="text" id="settings-user-name" class="settings-input" placeholder="例: Rikki, たろう, Alex">
+      <input type="text" id="settings-user-name" class="settings-input" placeholder="例: 瑠光子">
       <div class="settings-hint">AIがこの名前であなたに語りかけます</div>
       <label class="settings-label">AIパートナーの名前</label>
-      <input type="text" id="settings-ai-name" class="settings-input" placeholder="例: Titan, Luna, Nova">
+      <input type="text" id="settings-ai-name" class="settings-input" placeholder="例: けんちゃん">
       <div class="settings-hint">あなたの専属AI伴走者の名前です</div>
       <div class="settings-btn-group">
         <button class="settings-btn-cancel" onclick="closeSettings()">キャンセル</button>
@@ -437,7 +437,7 @@
     <div class="title">
       <img id="logo-img" src="./Genesis_pipe_Logo.png" alt="Genesis Pipe" class="title-logo"
            onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
-      <div id="logo-fallback" class="title-logo-fallback">✦ <span>GENESIS PIPE</span></div>
+      <div id="logo-fallback" class="title-logo-fallback">🚀 <span>GENESIS PIPE</span></div>
     </div>
     <div id="toggle-wrap">
       <button id="settings-btn" onclick="openSettings()" title="パートナー設定">
@@ -472,15 +472,15 @@
       <div id="synth-panel-title">⚗️ 叡智の蒸留 — Synthesis</div>
       <div class="synthesis-row">
         <button class="synth-btn" onclick="openSynthesisModal('Daily')">
-          <span class="synth-icon">🌙</span>
+          <span class="synth-icon">📅</span>
           <span class="synth-label">Daily</span>
         </button>
         <button class="synth-btn" onclick="openSynthesisModal('Weekly')">
-          <span class="synth-icon">📅</span>
+          <span class="synth-icon">📆</span>
           <span class="synth-label">Weekly</span>
         </button>
         <button class="synth-btn" onclick="openSynthesisModal('Monthly')">
-          <span class="synth-icon">📆</span>
+          <span class="synth-icon">🗓</span>
           <span class="synth-label">Monthly</span>
         </button>
         <button class="synth-btn" onclick="openSynthesisModal('Yearly')">
@@ -535,7 +535,7 @@
 
   <script>
     /* ── 設定 ── */
-    // ★ 自分のGASデプロイURL（/exec終わり）に変更してください
+    // ★★★ RumikoのGASデプロイURL（/exec終わり）に書き換えてください ★★★
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzPH6tx-0hTBVvwayn8TILFZHWpxvXK6It-NUwEa32vF2mEIvBI8KVKLH1P-4qAdJ3t/exec";
 
     // Firestoreと連携する場合のみ VercelのURLを設定。不要なら null のまま
@@ -839,7 +839,7 @@
           })
           .then(r => r.json())
           .then(() => {
-            addBubble("🌐 genesis_log（Firestore）にも記録完了。セッションをリセットします。", 'system');
+            addBubble("📡 genesis_log（Firestore）にも記録完了。セッションをリセットします。", 'system');
             conversationHistory = "";
           })
           .catch(err => {
